@@ -5,7 +5,7 @@ import "github.com/oranmoshai/go-clean-arch-template/template/entity"
 type MockDB struct {
 }
 
-func NewMockDB() *MockDB {
+func New() *MockDB {
 	return &MockDB{}
 }
 

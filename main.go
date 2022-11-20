@@ -8,8 +8,8 @@ import (
 
 func main() {
 	fmt.Println("Started")
-	repo := mockdatabase.NewMockDB()
-	s := service.NewService(repo)
+	repo := mockdatabase.New()
+	s := service.New(repo)
 	err := s.Run()
 	if err != nil {
 		panic(err)

@@ -2,19 +2,19 @@ package usecase
 
 import "github.com/oranmoshai/go-clean-arch-template/template/repository"
 
-type SampleUseCase struct {
+type Usecase struct {
 	repository repository.Repository
 }
 
-func NewSampleUseCase(repo repository.Repository) *SampleUseCase {
-	return &SampleUseCase{
+func New(repo repository.Repository) *Usecase {
+	return &Usecase{
 		repository: repo,
 	}
 }
 
-func (s *SampleUseCase) SampleUseCase() error {
+func (u *Usecase) Sample() error {
 
-	_, err := s.repository.ListUsers()
+	_, err := u.repository.ListUsers()
 	if err != nil {
 		return err
 	}

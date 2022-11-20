@@ -9,15 +9,15 @@ type Service struct {
 	repository repository.Repository
 }
 
-func NewService(repo repository.Repository) *Service {
+func New(repo repository.Repository) *Service {
 	return &Service{
 		repository: repo,
 	}
 }
 
 func (s *Service) Run() (err error) {
-	u := usecase.NewSampleUseCase(s.repository)
-	err = u.SampleUseCase()
+	u := usecase.New(s.repository)
+	err = u.Sample()
 	if err != nil {
 		return err
 	}
